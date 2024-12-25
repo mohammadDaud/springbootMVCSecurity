@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="userDetails" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="eca65f32-d388-401d-9231-82b381ece42b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="COMP_NM" class="java.lang.String"/>
+	<parameter name="REP_NM" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="user_id" class="java.lang.Long"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="role" class="java.lang.String"/>
+	<field name="enabled" class="java.lang.Boolean"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="310" height="20" uuid="99b4a038-0e13-400a-b07c-4a784bce9d7e"/>
+				<textElement>
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{COMP_NM}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="520" y="0" width="35" height="20" uuid="afcb3261-0413-42fd-be30-34979a8012cc"/>
+				<imageExpression><![CDATA["C:/Users/daudm/OneDrive/Desktop/applogo.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="0" y="20" width="310" height="20" uuid="0af5775e-9f19-4268-984a-6785f191c19c"/>
+				<textElement>
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REP_NM}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMM d, yyyy">
+				<reportElement x="450" y="0" width="70" height="20" uuid="6a751b8b-ee80-42ee-b7dd-e5b014b3db4a"/>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="415" y="0" width="34" height="20" uuid="66333194-f3a7-4ac7-ba28-35e6ffb1ce14"/>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATE :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="20" width="34" height="20" uuid="efbdbe54-0931-42e8-919a-7e03c6ca01af"/>
+				<textElement>
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PAGE :]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement x="470" y="20" width="15" height="20" uuid="0d285963-9cbf-4b1a-81e3-6a8a9afd4099"/>
+				<textElement>
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="464" y="20" width="6" height="20" uuid="d795910a-cba9-439b-9fc5-f6f1b87ddb4f"/>
+				<textElement>
+					<font fontName="Verdana" size="9" isBold="true"/>
+					<paragraph lineSpacingSize="1.0"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="450" y="20" width="14" height="20" uuid="1fb8e603-fe49-481c-9c0b-7b31eed1c3e6"/>
+				<textElement>
+					<font fontName="Verdana" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="11" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="60" height="10" uuid="749511cc-2072-4c71-812c-d7638e780003"/>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[User_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="0" width="85" height="10" uuid="6d9f1a75-27a5-474d-b22f-88fc8f5b019d"/>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="0" width="175" height="10" uuid="4d86aa96-18b0-44a2-8ca2-72f7d525bece"/>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="0" width="85" height="10" uuid="a29459a7-63e7-4e28-999d-5b9698d5e888"/>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Role]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="0" width="85" height="10" uuid="b9a1f2af-392b-4ecf-8752-c738b3076381"/>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Enabled]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="9" width="555" height="1" uuid="41fda18d-0ad0-4ebf-9114-5e54bfedc571"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="4b4db010-47dd-48e5-81d5-f5c59c9a4148"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="10" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="60" height="10" uuid="3fdff885-4bee-491c-91c2-62e10f9b74ae">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="604232e4-c4d2-4e1f-8f2b-41f038add043"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{user_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="0" width="85" height="10" uuid="ba4df879-dbfd-4e13-a5e8-e3c04d3d5e35">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8c8f026f-c869-46b3-8fcf-0b2a87142e73"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="176" height="10" uuid="4fcbf490-dd06-4af7-a616-3e0572e33e4e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8c8f026f-c869-46b3-8fcf-0b2a87142e73"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="85" height="10" uuid="d00224da-4252-42e9-b9c0-dc1e4217e83b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8c8f026f-c869-46b3-8fcf-0b2a87142e73"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{role}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="0" width="85" height="10" uuid="1e244282-4512-4ce1-94ff-b8fb41db55ef">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8c8f026f-c869-46b3-8fcf-0b2a87142e73"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Verdana" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{enabled}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

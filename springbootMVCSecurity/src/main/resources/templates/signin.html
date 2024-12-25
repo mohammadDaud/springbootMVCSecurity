@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>Sign In</title>
+</head>
+<body>
+	<section>
+		<div id="LoginForm">
+			<div class="container">
+				<div class="login-form">
+					<div class="main-div">
+						<div class="panel">
+							<h2>Sign IN</h2>
+							<div class="alert alert-danger" th:if="${param.error}" >
+							  <p>Please enter your username and password</p>
+							</div>
+							<div class="alert alert-success" th:if="${param.logout}" >
+							  <p>Log Out Successfull!!!!</p>
+							</div>
+						</div>
+						<form id="Login" th:action="@{/dologin}" action="#" method="post">
+							<div class="form-group">
+								<input type="text" class="form-control" id="username" name="username"
+									placeholder="User Name">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" id="password" name="password"
+									placeholder="password">
+							</div>
+							<div class="forgot">
+								<a href="reset.html">Forgot password?</a>
+							</div>
+							<button type="submit" class="btn btn-primary">Login</button>
+							<div class="form-group">
+                             <div class="forgot">
+								<a href="#" th:href="@{/signup}">Sign Up?</a>
+							</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

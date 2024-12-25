@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:fragment="layout(content)">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"
+	type="text/css">
+<link rel="stylesheet" th:href="@{/css/style.css}" type="text/css">
+<link th:href="@{/fontawesome/css/all.min.css}" rel="stylesheet"
+	type="text/css">
+<link
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet">
+<title th:text="${title}">Hello, world!</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand me-2" th:href="@{/signin}" href="#">
+      <img th:src="@{../img/Logo.png}" height="100" alt="" loading="lazy" style="margin-top: -1px;" />
+    </a>
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample" 
+            aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarButtonsExample">
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/signin}" href="#">APP</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class="container">
+		<div class="row row-offcanvas row-offcanvas-left">
+			<div th:replace="${content}"></div>
+		</div>
+	</div>
+	<div class="container">
+		<footer class="main-footer">
+			<strong>Copyright &copy; 2020-2021 <a href="#">MD
+					Company.io</a>.
+			</strong> All rights reserved.
+			<div class="float-right d-none d-sm-inline-block">
+				<b>Version</b> 1.0.0
+			</div>
+		</footer>
+	</div>
+	<!-- Optional JavaScript; choose one of the two! -->
+	<script th:src="@{/jquery/jquery-3.6.0.js}" type="text/javascript"></script>
+	<script th:src="@{/jquery/jquery-ui/jquery-ui.min.js}"
+		type="text/javascript"></script>
+	<script th:src="@{/jquery/popper/popper.min.js}" type="text/javascript"></script>
+	<script th:src="@{/bootstrap/js/bootstrap.bundle.min.js}"
+		type="text/javascript"></script>
+	<script th:src="@{/bootstrap/js/bootstrap.min.js}"
+		type="text/javascript"></script>
+	<script type="text/javascript" th:src="@{/js/script.js}"></script>
+</body>
+</html>
